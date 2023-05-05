@@ -29,6 +29,8 @@ services:
     environment:
       PMA_HOST: drupal_db
       MYSQL_ROOT_PASSWORD: drupal
+    volumes:
+      - ./php.ini:/usr/local/etc/php/php.ini
     ports:
       - "8081:80"
     networks:
